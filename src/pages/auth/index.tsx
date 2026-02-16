@@ -7,7 +7,7 @@ const Auth = () => {
 
   if (!session.data) {
     return (
-      <button onClick={signIn} className="self-center cursor-grabbing">
+      <button onClick={() => signIn} className="self-center cursor-grabbing">
         Login
       </button>
     );
@@ -16,7 +16,7 @@ const Auth = () => {
   return (
     <>
       <div className="text-center">auth</div>
-      <button onClick={signOut} className="self-center cursor-grabbing">
+      <button onClick={() => signOut} className="self-center cursor-grabbing">
         Log Out
       </button>
     </>
