@@ -10,7 +10,7 @@ const server = (props: any) => {
       <button onClick={() => route.push('/my-server')} className="bg-amber-400">
         click me
       </button>
-      {props.data?.map((user) => (
+      {props.data?.map((user: any) => (
         <li key={user.id}>{user.firstName}</li>
       ))}
     </div>

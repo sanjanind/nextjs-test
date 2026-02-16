@@ -18,7 +18,9 @@ const server = (props: any) => {
   );
 };
 
-export const getServerSideProps = async (context) => {
+export const getServerSideProps = async (context: {
+  query: { id: string };
+}) => {
   const id = context.query.id;
   const data = await (await fetch(`https://dummyjson.com/users/${id}`)).json();
   console.log('id-', id, data);

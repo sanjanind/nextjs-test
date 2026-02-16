@@ -25,7 +25,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async (context) => {
+export const getStaticProps = async (context: { params: { id: string } }) => {
   const id = context.params.id;
   const data = await (await fetch(`https://dummyjson.com/users/${id}`)).json();
   console.log('id-', id, data);
